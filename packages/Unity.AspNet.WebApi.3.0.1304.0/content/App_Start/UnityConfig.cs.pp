@@ -1,12 +1,8 @@
-using System;
-using System.Threading.Tasks;
-using System.Web;
+﻿using System;
 using Microsoft.Practices.Unity;
 using Microsoft.Practices.Unity.Configuration;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using MusicJam.Infrastructure.IoC;
 
-namespace MusicJam.Presentation.Web.App_Start
+namespace $rootnamespace$.App_Start
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.
@@ -36,9 +32,11 @@ namespace MusicJam.Presentation.Web.App_Start
         /// change the defaults), as Unity allows resolving a concrete type even if it was not previously registered.</remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            WebRegistration.Register(container);
-            UnitOfWorkModule.SetContainer(container);
-            DynamicModuleUtility.RegisterModule(typeof(UnitOfWorkModule));
+            // NOTE: To load from web.config uncomment the line below. Make sure to add a Microsoft.Practices.Unity.Configuration to the using statements.
+            // container.LoadConfiguration();
+
+            // TODO: Register your types here
+            // container.RegisterType<IProductRepository, ProductRepository>();
         }
     }
 }

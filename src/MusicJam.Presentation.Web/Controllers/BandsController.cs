@@ -4,12 +4,19 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using MusicJam.Core.Domain.Model;
+using MusicJam.Core.Domain.Repositories;
 
 namespace MusicJam.Presentation.Web.Controllers
 {
     public class BandsController : ApiController
     {
-        
+        private IBandRepository _repo;
+
+        public BandsController(IBandRepository repo)
+        {
+            _repo = repo;
+        }
 
         // GET api/bands
         [Route("api/bands")]
@@ -29,7 +36,13 @@ namespace MusicJam.Presentation.Web.Controllers
         [Route("api/bands")]
         public void Post([FromBody]string value)
         {
-
+            var band = new Band()
+            {
+                Name = "Super Gnar",
+                Photo = "/path/to/photo.jpg",
+                Bio = "Yay!!!"
+            };
+            _repo.Add(band);
         }
 
         // PUT api/bands/5

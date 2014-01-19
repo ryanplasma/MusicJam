@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Interfaces\IUnitOfWork.cs" />
     <Compile Include="Domain\Model\Album.cs" />
     <Compile Include="Domain\Model\Band.cs" />
     <Compile Include="Domain\Model\Member.cs" />
