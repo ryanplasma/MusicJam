@@ -42,7 +42,14 @@ namespace MusicJam.Presentation.Web.Controllers
                 Photo = "/path/to/photo.jpg",
                 Bio = "Yay!!!"
             };
+            var band2 = new Band()
+            {
+                Name = "Ultra Gnar",
+                Photo = "/path/to/ultragnar.jpg",
+                Bio = "This gnar is gnar!!!"
+            };
             _repo.Add(band);
+            _repo.Add(band2);
         }
 
         // PUT api/bands/5

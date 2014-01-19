@@ -8,7 +8,6 @@ namespace MusicJam.Presentation.Web
 {
     public class UnitOfWorkModule : IHttpModule
     {
-        private IUnitOfWork _uow;
         private static IUnityContainer Container;
 
         public void Dispose()
@@ -29,13 +28,15 @@ namespace MusicJam.Presentation.Web
 
         void context_EndRequest(object sender, EventArgs e)
         {
-            _uow.Commit();
+            var uow = (IUnitOfWork) HttpContext.Current.Items["UnitOfWork"];
+            uow.Commit();
         }
 
         void context_BeginRequest(object sender, EventArgs e)
         {
-            _uow = Container.Resolve<IUnitOfWork>();
-            _uow.Begin();
+            var uow = Container.Resolve<IUnitOfWork>();
+            HttpContext.Current.Items.Add("UnitOfWork", uow);
+            uow.Begin();
         }
     }
 }
