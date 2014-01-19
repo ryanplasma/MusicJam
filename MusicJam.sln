@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicJam.Infrastructure.Int
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicJam.Presentation.Web", "src\MusicJam.Presentation.Web\MusicJam.Presentation.Web.csproj", "{12EB1D39-75C8-42C0-AB49-541BC3C9BE94}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicJam.Infrastructure.IoC", "src\MusicJam.Infrastructure.IoC\MusicJam.Infrastructure.IoC.csproj", "{32BF30F8-6637-417D-924B-F9C5CC645B05}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{12EB1D39-75C8-42C0-AB49-541BC3C9BE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12EB1D39-75C8-42C0-AB49-541BC3C9BE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12EB1D39-75C8-42C0-AB49-541BC3C9BE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32BF30F8-6637-417D-924B-F9C5CC645B05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32BF30F8-6637-417D-924B-F9C5CC645B05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32BF30F8-6637-417D-924B-F9C5CC645B05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32BF30F8-6637-417D-924B-F9C5CC645B05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

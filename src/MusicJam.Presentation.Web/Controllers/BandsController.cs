@@ -9,6 +9,8 @@ namespace MusicJam.Presentation.Web.Controllers
 {
     public class BandsController : ApiController
     {
+        
+
         // GET api/bands
         [Route("api/bands")]
         public IEnumerable<string> Get()
@@ -27,6 +29,7 @@ namespace MusicJam.Presentation.Web.Controllers
         [Route("api/bands")]
         public void Post([FromBody]string value)
         {
+
         }
 
         // PUT api/bands/5
